@@ -1,4 +1,4 @@
-## My Web Application (Title)
+JustRent
 
 * [General info](#general-info)
 * [Technologies](#technologies)
