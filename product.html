@@ -24,45 +24,45 @@
       }
 
       .nav {
-            overflow: hidden;
-            background-color: #000;  
-            width: 100%;
-            display: grid;
-            grid-template-columns: 20% 20% 20% 20% 20%;
-        }
+        overflow: hidden;
+        background-color: #000;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+      }
 
-        .nav a {
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 0px;
-            text-decoration: none;
-            font-size: 14px;
-        }
+      .nav a {
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 0px;
+        text-decoration: none;
+        font-size: 14px;
+      }
 
-        #bn1 {
-            grid-column: 1 / span 1;
-        }
+      #bn1 {
+        grid-column: 1 / span 1;
+      }
 
-        #bn2 {
-            grid-column: 2 / span 1;
-        }
+      #bn2 {
+        grid-column: 2 / span 1;
+      }
 
-        #bn3 {
-            grid-column: 3 / span 1;
-        }
+      #bn3 {
+        grid-column: 3 / span 1;
+      }
 
-        #bn4 {
-            grid-column: 4 / span 1;
-        }
+      #bn4 {
+        grid-column: 4 / span 1;
+      }
 
-        #bn5 {
-            grid-column: 5 / span 1;
-        }
+      #bn5 {
+        grid-column: 5 / span 1;
+      }
 
-        .nav a:hover{
-            background-color: #e67e22;
-        }
+      .nav a:hover {
+        background-color: #e67e22;
+      }
     </style>
   </head>
   <body>
@@ -145,18 +145,7 @@
         </div>
         <div class="col-sm">
           <h1 class="font-weight-bold">---Product Name---</h1>
-          <p class="text-muted">Lorem ipsum dolor sit amet</p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dicta
-            veniam nisi dolorem blanditiis eaque saepe aliquid. Eius doloribus
-            sit deserunt delectus iusto quasi voluptatibus. Excepturi, vitae
-            sint. Perspiciatis maiores illum culpa quidem? Reiciendis, dolor
-            aut! Debitis aut adipisci autem similique molestias eius dolorem,
-            amet ab quisquam iusto saepe quidem.
-          </p>
-          <br />
-          <h3>$ ----/per week</h3>
+          <p class="fw-lighter">Lorem ipsum dolor sit amet</p>
           <div class="star">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -164,23 +153,103 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
           </div>
+          <br />
+          <h3>$ ----/per week</h3>
+          <p class="fw-lighter">Deposit - $--</p>
+
+          
+          <label for="customRange3" class="form-label"
+            >How long do you want to rent this for? (Weeks)
+          </label>
+          <input
+            type="range"
+            class="form-range"
+            min="1"
+            max="5"
+            step="1"
+            id="customRange3"
+          />
+          <br />
+          <br />
+          <div class="align-self-end">
+            <button type="button" class="btn btn-dark">Rent Now</button>
+            <button type="button" class="btn btn-outline-dark">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <h3>Description</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            vero soluta, quasi fuga distinctio reiciendis unde amet blanditiis
+            doloribus. Culpa atque necessitatibus a, quibusdam fuga obcaecati
+            eum sunt deserunt ab porro totam quia aliquid veniam perspiciatis
+            facilis corrupti nemo, dolor, natus laudantium incidunt odio
+            pariatur. Optio harum corrupti, laborum, vel aperiam perspiciatis
+            tenetur corporis consequuntur maxime nemo saepe laudantium eum atque
+            amet blanditiis quasi commodi deleniti nihil magni neque, odio
+            cumque facere! Quisquam, nisi dicta.
+          </p>
+            </li>
+            <li class="list-group-item">
+              <h3>Dimensions</h3>
+              <ul>
+                <li>----</li>                
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <h3>Features & Specs</h3>
+              <ul>
+                <li>----</li>
+                <li>----</li>
+                <li>----</li>
+                <li>----</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <h3>Color & Material</h3>
+              <p>Lorem, ipsum.</p>
+            </li>
+            <li class="list-group-item">
+              <h3>Ratings</h3>
+              <br>
+              <div class="btn-group">
+                <button class="btn btn-secondary btn-sm dropdown-toggle btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Filter By
+                </button>
+                <ul class="dropdown-menu">
+                  <li>5-Star</li>
+                  <li>4-Star</li>
+                  <li>3-Star</li>
+                  <li>2-Star</li>
+                  <li>1-Star</li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-sm btn-dark">Add your own rating</button>
+            </li>
+            
+          </ul>
         </div>
       </div>
     </div>
-    <div class="container my-50px">
-      <div class="align-self-end float-end">
-        <button type="button" class="btn btn-dark">Rent Now</button>
-        <button type="button" class="btn btn-outline-dark">Add to Cart</button>
-      </div>
-    </div>
-
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="nav fixed-bottom">
       <a href="#" id="bn1">Home</a>
       <a href="#" id="bn2">Equipment</a>
       <a href="#" id="bn3">Video</a>
       <a href="#" id="bn4">Support</a>
       <a href="#" id="bn5">User</a>
-  </div>
+    </div>
+    <br />
 
     <!-- Optional JavaScript; choose one of the two! -->
 
