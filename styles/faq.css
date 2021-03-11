@@ -1,5 +1,5 @@
 #info{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../images/pexels-dorothy-castillo-2158963.jpg);
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(../images/pexels-dorothy-castillo-2158963.jpg);
     background-position: center;
     height: 250px;
     width: 100%;
@@ -9,4 +9,13 @@
     justify-items: center;
     color: white;
     margin-bottom: 50px;
+}
+
+#info h1{
+    margin-top: 35px;
+    padding: 0 15px;
+}
+
+#list-example h4{
+    font-size: 16px;
 }
