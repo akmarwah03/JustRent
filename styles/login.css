@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#info{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../images/loginbg.jpg);
+    background-position: center;
+    height: 250px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+#user{
+    margin-top: 50px;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+#username{
+    margin-top: 20px;
+    align-self: start;
+}
+
+.button-log{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #e67e22;
+    border: none;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#login{
+    top:50%;
+}
+
+#contact{
+    top:60%;
+}
+
+#about{
+    top:70%;
+}
