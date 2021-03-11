@@ -14,6 +14,7 @@
 
 
     <!-- Optional styles and scripts of your own -->
+    <link rel="stylesheet" href="./styles/contact.css"/>
     <style>
         .nav {
             overflow: hidden;
@@ -87,21 +88,16 @@
         </nav>
     </div>
 
+    <div id="info">
+        <h1 class="display-4 welcome"><b>Contact Us</b></h1>
+
+        <div class="btn-group links btn-group-lg" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-light" onclick="document.location='./covidguidelines.html'">COVID Guidelines</button>
+            <button type="button" class="btn btn-warning" onclick="document.location='./faq.html'">FAQs</button>
+          </div>
+
+    </div>
     <div class="container">
-        <h1 class="display-4 welcome"><b>Contact</b></h1>
-
-        <div class="border border-light p-3 mb-4">
-
-            <div class="text-center">
-                <a href="covidguidelines.html" button type="button" class="btn btn-outline-dark btn-lg">Covid Guidelines</button></a>
-            </div>
-            <br />
-            <div class="text-center">
-                <a href="faq.html" button type="button" class="btn btn-outline-dark btn-lg">FAQs</button></a>
-            </div>
-
-
-        </div>
         <div class="row row-cols-2 row-cols-md-2 g-4 gridCards">
             <div class="col">
                 <div class="card">
@@ -123,7 +119,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <form class = "form">
         <div class="mb-3">
@@ -139,7 +134,7 @@
         <button type="submit" class="btn btn-outline-dark">Submit</button>
       </form>
       <br/><br/><br/>
-
+    </div>
     <div class="nav fixed-bottom">
         <a href="#" id="bn1">Home</a>
         <a href="#" id="bn2">Equipment</a>

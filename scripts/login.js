@@ -58,4 +58,7 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
             $("#firebaseui-auth-container").css("display","block");
             $("#buttons").css("display","none");
         });
+        $("#contact").click(function() {
+            window.location.href = "./contact.html";
+        });
         
