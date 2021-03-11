@@ -15,7 +15,7 @@
     align-items: center;
     justify-items: center;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 #user{
@@ -31,25 +31,24 @@
     align-self: start;
 }
 
-.button-log{
-    width: 80%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    background-color: #e67e22;
-    border: none;
-    font-size: 25px;
+.links{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap: 1em;
+    justify-items: center;
+}
+
+.custom{
+    width: 85%;
     padding: 10px;
+    background-color: #ffb371;
+    text-align: start;
 }
 
-#login{
-    top:50%;
+.custom i{
+    vertical-align:middle;
+    font-size: 22px;
 }
 
-#contact{
-    top:60%;
-}
 
-#about{
-    top:70%;
-}
+
