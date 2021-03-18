@@ -1,0 +1,44 @@
+#info{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(../images/dumbell.jpg);
+    background-position: center;
+    height: 250px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#info h1{
+    margin-top: 55px;
+}
+#info p{
+    padding: 0 15px;
+}
+
+.card-img-top{
+    height: 230px;
+    border-bottom: 2px solid #e67e22;
+    padding: 25px;
+}
+
+.col{
+    margin-bottom: 10px;
+}
+
+
+.card-title{
+    float: left;
+}
+.fa-star{
+    float: right;
+}
+
+.card-text{
+    float: left;
+}
+
+.checked {
+    color: orange;
+  }
