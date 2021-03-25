@@ -1,3 +1,12 @@
+.main{
+    margin: 6% auto;
+}
+
+.buy{
+    position: relative;
+    top: 20px;
+}
+
 .rating{
     margin-left: 3%;
 }
@@ -5,3 +14,14 @@
 .submit{
     float: right;
 }
+
+.price{
+    margin-top: 15px;
+}
+
+hr{
+    margin: 40px auto;
+    width: 75%;    
+  }
+  
+  
