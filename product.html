@@ -16,10 +16,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <title>Product Page</title>
-    <link rel="stylesheet" href="./styles/nav.css"/>
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/product.css" />
+    <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
     <style>
       .checked {
         color: orange;
@@ -46,7 +51,7 @@
     </div>
 
     <!--Product image and discription-->
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-sm">
           <!--Product Image Crousel-->
@@ -118,7 +123,6 @@
           <h3>$ ----/per week</h3>
           <p class="fw-lighter">Deposit - $--</p>
 
-          
           <label for="customRange3" class="form-label"
             >How long do you want to rent this for? (Weeks)
           </label>
@@ -146,22 +150,23 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <h3>Description</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-            vero soluta, quasi fuga distinctio reiciendis unde amet blanditiis
-            doloribus. Culpa atque necessitatibus a, quibusdam fuga obcaecati
-            eum sunt deserunt ab porro totam quia aliquid veniam perspiciatis
-            facilis corrupti nemo, dolor, natus laudantium incidunt odio
-            pariatur. Optio harum corrupti, laborum, vel aperiam perspiciatis
-            tenetur corporis consequuntur maxime nemo saepe laudantium eum atque
-            amet blanditiis quasi commodi deleniti nihil magni neque, odio
-            cumque facere! Quisquam, nisi dicta.
-          </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia vero soluta, quasi fuga distinctio reiciendis unde amet
+                blanditiis doloribus. Culpa atque necessitatibus a, quibusdam
+                fuga obcaecati eum sunt deserunt ab porro totam quia aliquid
+                veniam perspiciatis facilis corrupti nemo, dolor, natus
+                laudantium incidunt odio pariatur. Optio harum corrupti,
+                laborum, vel aperiam perspiciatis tenetur corporis consequuntur
+                maxime nemo saepe laudantium eum atque amet blanditiis quasi
+                commodi deleniti nihil magni neque, odio cumque facere!
+                Quisquam, nisi dicta.
+              </p>
             </li>
             <li class="list-group-item">
               <h3>Dimensions</h3>
               <ul>
-                <li>----</li>                
+                <li>----</li>
               </ul>
             </li>
             <li class="list-group-item">
@@ -174,27 +179,85 @@
               </ul>
             </li>
             <li class="list-group-item">
-              <h3>Color & Material</h3>
-              <p>Lorem, ipsum.</p>
-            </li>
-            <li class="list-group-item">
               <h3>Ratings</h3>
-              <br>
-              <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Filter By
-                </button>
-                <ul class="dropdown-menu">
-                  <li>5-Star</li>
-                  <li>4-Star</li>
-                  <li>3-Star</li>
-                  <li>2-Star</li>
-                  <li>1-Star</li>
-                </ul>
+              <br />
+              <button
+                class="btn btn-secondary btn-sm dropdown-toggle btn-dark filter btgr"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Filter By
+              </button>
+              <ul class="dropdown-menu">
+                <li>5-Star</li>
+                <li>4-Star</li>
+                <li>3-Star</li>
+                <li>2-Star</li>
+                <li>1-Star</li>
+              </ul>
+              <a
+                class="btn btn-sm btn-dark rating btgr"
+                data-bs-toggle="collapse"
+                href="#addReview"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                Leave a Rating
+              </a>
+              <div class="collapse" id="addReview">
+                <div class="card card-body">
+                  <h4>Your review matters</h4>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="your name"
+                    />
+                    <label for="floatingInput">Full Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput2"
+                      placeholder="name@example.com"
+                      aria-describedby="emailHelp"
+                    />
+                    <label for="floatingInput2">Email address</label>
+                    <div id="emailHelp" class="form-text">
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        placeholder="Leave a comment here"
+                        id="floatingTextarea2"
+                        style="height: 100px"
+                      ></textarea>
+                      <label for="floatingTextarea2">Description</label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <select class="form-select col-sm-3" aria-label="Default select example" style="width: 50%;">
+                      <option selected>Stars</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                      <option value="4">Four</option>
+                      <option value="5">Five</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <a class="btn btn-dark submit" href="#" role="button">Submit</a>
+                  </div>
+                </div>
               </div>
-              <button type="button" class="btn btn-sm btn-dark">Add your own rating</button>
             </li>
-            
           </ul>
         </div>
       </div>
