@@ -30,4 +30,25 @@ function starRating(x) {
 
 }
 
+function readData2 () {
+    db.collection("reviews").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(doc);
+            if (doc.data().pid == "db1") {
+                let x = doc.data().stars;
+                for (var j = 1; j <= x; j++) {
+                    $(".stars" + j).css("color", "orange");
+                    
+                }
+                var stars = $('<div class="star"> <span class="fa fa-star stars1"></span> <span class="fa fa-star stars2"></span><span class="fa fa-star stars3"></span><span class="fa fa-star stars4"></span><span class="fa fa-star stars5"></span></div>');
+                $("#alen").append(stars);
+
+                var data = $()
+            
+            }
+        })
+    } )
+}
+
+readData2();
 readData();
