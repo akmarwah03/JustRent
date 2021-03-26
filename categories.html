@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My BCIT Project</title>
+    <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
+
+    <!-- Bootstrap for Mobile-first, and JQuery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Optional styles and scripts of your own -->
+    <link rel="stylesheet" href="./styles/nav.css"/>
+    <style>
+        .welcome{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .gridCards{
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .p1 {
+            text-align : center;
+            font-size : 22px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar sticky-top navbar-light bg-light">
+            <div class="container-fluid">
+            <a class="navbar-brand">JustRent</a>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>
+            </div>
+        </nav>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/dumbell.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/barbell.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/yoga.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <h1 class="display-4 welcome"> Product Categories</h1>
+        <div class = "p1"> <b>Look through our categories to find what is right for you!</b></div>
+        <div class="row row-cols-1 row-cols-md-1 g-4 gridCards">
+            <div class="col">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Dumbbels</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Barbells</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Yoga Mats</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Aerobic Stepper</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                  <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Resistance Bands</h5>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </div>
+
+   
+
+    <nav class="nav">
+      <a href="./index.html" class="nav__link nav__link--active">
+        <i class="material-icons nav__icon">home</i>
+        <span class="nav__text">Home</span>
+      </a>
+      <a href="./categories.html" class="nav__link nav__link">
+        <i class="material-icons nav__icon">sports_mma</i>
+        <span class="nav__text">Equipments</span>
+      </a>
+      <a href="./videos.html" class="nav__link">
+        <i class="material-icons nav__icon">play_circle</i>
+        <span class="nav__text">Videos</span>
+      </a>
+      <a href="./login.html" class="nav__link">
+        <i class="material-icons nav__icon">person</i>
+        <span class="nav__text">Account</span>
+      </a>
+    </nav>
+    
+      
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+
+</body>
+
+</html>
