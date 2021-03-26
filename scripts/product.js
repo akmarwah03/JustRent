@@ -1,11 +1,11 @@
 console.log("hello");
 function readData() {
     db.collection("equipments")
-        .where("pid", "==", "db6")
+        .where("pid", "==", "db1")
         .get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
+                
                 console.log(doc.id, " => ", doc.data());
                 $("img.pimg").attr("src", doc.data().imgurl);
                 $("h1.prd-name").text(doc.data().name);
@@ -15,6 +15,10 @@ function readData() {
 
                 var starNo = Math.floor(doc.data().avgRating);
                 starRating(starNo);
+
+                $(".hght").text(doc.data().height);
+                $(".wdth").text(doc.data().width);
+                $(".lgth").text(doc.data().lenght);
             });
         })    
 }
@@ -23,6 +27,7 @@ function starRating(x) {
     for (var j = 1; j <= x; j++) {
         $(".st" + j).css("color", "orange");
     }
+
 }
 
 readData();
