@@ -1,8 +1,15 @@
 db.collection("equipments").get().then((querySnapshot) => {
     let group = $('<div class="row row-cols-1 row-cols-md-2 g-4"></div>');
+    let category = localStorage.getItem('category');
+    if(category == "db")
+        $("#categoryname").html("Dumbbells");
+    else if(category == "wp")
+        $("#categoryname").html("Weight Plates");
+    else
+        $("#categoryname").html("Kettlebells");
     $('#main').append(group);
     querySnapshot.forEach((doc) => {     
-        if (doc.id.substring(0,2) == "db") {
+        if (doc.id.substring(0,2) == category) {
             let col = $('<div class="col"></div>');
             $(group).append(col);
             let out = $('<div class="card border-dark"></div>');
@@ -38,6 +45,8 @@ db.collection("equipments").get().then((querySnapshot) => {
             }
         }
     });
+
+
     
 });
 
