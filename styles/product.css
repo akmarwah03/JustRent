@@ -1,27 +1,37 @@
-.main{
-    margin: 6% auto;
+.main {
+  margin: 6% auto;
 }
 
-.buy{
-    position: relative;
-    top: 20px;
+.buy {
+  position: relative;
+  top: 20px;
 }
 
-.rating{
-    margin-left: 3%;
+.rating {
+  margin-left: 3%;
 }
 
-.submit{
-    float: right;
+.submit {
+  float: right;
 }
 
-.price{
-    margin-top: 15px;
+.price {
+  margin-top: 15px;
 }
 
-hr{
-    margin: 40px auto;
-    width: 75%;    
-  }
-  
-  
+hr {
+  margin: 40px auto;
+  width: 75%;
+}
+
+.pimg {
+  height: 250px;
+}
+
+.checked {
+  color: orange;
+}
+
+.name {
+  color: blue;
+}
