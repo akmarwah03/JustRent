@@ -69,9 +69,21 @@ function submitReview(e){
 
     console.log(name + " " + email + " " + decrip + " " + star + " " + prodID);
 
-    getIdVal("userName").value = "";
+    document.getElementById("reviewAlert").style.display = "block";
 
-    document.getElementById("addReview").reset();
+    setTimeout(function(){
+        document.getElementById("reviewAlert").style.display = "none";
+    },3000);
+
+    document.getElementById("userName").value = " ";
+    document.getElementById("userEmail").value = " ";
+    document.getElementById("userDesc").value = " ";
+    document.getElementById("starsRate").value = " ";
+
+    // $("#addReview").trigger('reset');
+    // getIdVal("userName").value = "";
+    // document.getElementById("addReview").reset()
+    
 };
 
 function getIdVal(id){

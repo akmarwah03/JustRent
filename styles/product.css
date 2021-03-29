@@ -35,3 +35,8 @@ hr {
 .name {
   color: blue;
 }
+
+#reviewAlert {
+  display: none;
+
+}
