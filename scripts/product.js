@@ -1,4 +1,4 @@
-console.log("hello");
+//console.log("hello");
 function readData() {
     db.collection("equipments")
         .where("pid", "==", "db1")
@@ -6,7 +6,7 @@ function readData() {
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 
-                console.log(doc.id, " => ", doc.data());
+                //console.log(doc.id, " => ", doc.data());
                 $("img.pimg").attr("src", doc.data().imgurl);
                 $("h1.prd-name").text(doc.data().name);
                 $(".desc").text(doc.data().category);
@@ -33,7 +33,7 @@ function starRating(x) {
 function readData2 () {
     db.collection("reviews").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            console.log(doc);
+            //console.log(doc);
             if (doc.data().pid == "db1") {
                 let x = doc.data().stars;
                 for (var j = 1; j <= x; j++) {
@@ -52,3 +52,51 @@ function readData2 () {
 
 readData2();
 readData();
+
+let review = firebase.database().ref("ratings");
+document.getElementById("addReview").addEventListener("submit",submitReview);
+
+
+function submitReview(e){
+    e.preventDefault();
+    var name = getIdVal("userName");
+    var email = getIdVal("userEmail");
+    var decrip = getIdVal("userDesc");
+    var star = getIdVal("starsRate");
+    var prodID = "db1";
+
+    saveReview(name, email, decrip, star, prodID);
+
+    console.log(name + " " + email + " " + decrip + " " + star + " " + prodID);
+
+    getIdVal("userName").value = "";
+
+    document.getElementById("addReview").reset();
+};
+
+function getIdVal(id){
+    return document.getElementById(id).value;
+}
+
+function saveReview(name, email, decrip, star, prodID){
+
+    // db.collection("reviews").push();
+    
+    db.collection("reviews").add({         //write to firestore
+        description : decrip,
+        email : email,
+        name : name,
+        stars : star,
+        pid : prodID,                          //with authenticated user's ID (user.uid)
+    });
+    
+    // let newReview = review.push();
+    
+    // newReview.set({
+    //     description : decrip,
+    //     email : email,
+    //     name : name,
+    //     stars : star,
+    //     pid : prodID,
+    // })
+}
