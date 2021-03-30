@@ -120,6 +120,16 @@ var output = document.getElementById("rent");
 
 slider.oninput = function() {
     var x = this.value;
+    db.collection("equipments")
+    .doc("db1")
+    .get()
+    .then(function (doc){
+        var y = doc.data().cost;
+        var p = x*y
+        document.getElementById("xyz").innerHTML = p;
+        console.log(y*x);
+
+    }) 
 
     if(x == 1){
         output.innerHTML = "You want to rent it for " + x + " week";
