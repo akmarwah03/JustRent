@@ -1,4 +1,5 @@
 //console.log("hello");
+
 function readData() {
     db.collection("equipments")
         .where("pid", "==", "db1")
@@ -111,4 +112,20 @@ function saveReview(name, email, decrip, star, prodID){
     //     stars : star,
     //     pid : prodID,
     // })
+}
+
+var slider = document.getElementById("weeks");
+var output = document.getElementById("rent");
+
+
+slider.oninput = function() {
+    var x = this.value;
+
+    if(x == 1){
+        output.innerHTML = "You want to rent it for " + x + " week";
+    }
+
+    else{    
+    output.innerHTML = "You want to rent it for " + x + " weeks";
+    }
 }

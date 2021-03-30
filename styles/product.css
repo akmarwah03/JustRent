@@ -40,3 +40,8 @@ hr {
   display: none;
 
 }
+
+#weeks ::after{
+  content: '5';
+
+}
