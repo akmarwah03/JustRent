@@ -126,7 +126,7 @@ slider.oninput = function() {
     .then(function (doc){
         var y = doc.data().cost;
         var p = x*y
-        document.getElementById("xyz").innerHTML = p;
+        document.getElementById("xyz").innerHTML = p + " for " + x + " weeks";
         console.log(y*x);
 
     }) 
