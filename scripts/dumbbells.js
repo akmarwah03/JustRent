@@ -12,7 +12,12 @@ db.collection("equipments").get().then((querySnapshot) => {
         if (doc.id.substring(0,2) == category) {
             let col = $('<div class="col"></div>');
             $(group).append(col);
-            let out = $('<div class="card border-dark"></div>');
+            let pid = doc.data().pid;
+            let out = $('<div class="card border-dark" id = "' + pid + '"></div>');
+            out.click(() => {
+                localStorage.setItem('product', pid);
+                window.location.href = "./product.html";
+            });
             $(col).append(out);
             let img = $('<img class="card-img-top"/>');
             let cardbody = $('<div class="card-body"></div>');
@@ -49,6 +54,9 @@ db.collection("equipments").get().then((querySnapshot) => {
 
     
 });
+
+
+
 
 /*function writeCities() {
     var citiesRef = db.collection("equipments");

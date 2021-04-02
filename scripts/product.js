@@ -1,8 +1,9 @@
 //console.log("hello");
 
 function readData() {
+    var pid = localStorage.getItem('product'); 
     db.collection("equipments")
-        .where("pid", "==", "db1")
+        .where("pid", "==", pid)
         .get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
