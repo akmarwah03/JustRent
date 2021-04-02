@@ -20,6 +20,8 @@ function readData() {
                 $(".hght").text(doc.data().height);
                 $(".wdth").text(doc.data().width);
                 $(".lgth").text(doc.data().lenght);
+
+
             });
         })    
 }
@@ -127,7 +129,7 @@ slider.oninput = function() {
         var y = doc.data().cost;
         var p = x*y
         document.getElementById("xyz").innerHTML = p + " for " + x + " weeks";
-        console.log(y*x);
+        //console.log(y*x);
 
     }) 
 
@@ -139,3 +141,12 @@ slider.oninput = function() {
     output.innerHTML = "You want to rent it for " + x + " weeks";
     }
 }
+
+function addWebcamListener(id,) {
+    document.getElementById("Add-to-cart").addEventListener("click", function () {
+      console.log(id + "was clicked!");
+      //window.location.href="details.html";
+      //how to send the id
+      window.location.href = "details.html?id=" + id + "?weeks=" + week ;
+    });
+  }
