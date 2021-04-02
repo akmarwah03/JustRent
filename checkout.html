@@ -11,16 +11,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
   <!-- Optional styles and scripts of your own -->
   <link rel="stylesheet" href="./styles/nav.css" />
-  <link rel="stylesheet" href="./styles/login.css" />
+  <link rel="stylesheet" href="./styles/checkout.css" />
+  <style>
+    .welcome {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .gridCards {
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
+    .p1 {
+      text-align: center;
+      font-size: 22px;
+    }
+  </style>
+
 </head>
 
 <body>
 
-  <div class="container topnav">
+  <div class="container">
     <nav class="navbar sticky-top navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand">JustRent</a>
@@ -31,33 +49,28 @@
       </div>
     </nav>
   </div>
+
   <div id="info">
-    <img id="user" src="./images/stockuser.jpg" />
-    <h2 id="username">Welcome, User</h2>
+    <h1 class="text-center">Checkout</h1>
   </div>
-  <div class="links">
-    <button type="button" class="button-log btn custom" id="login">
-      <i class="material-icons nav__icon">supervisor_account</i>
-      Log In/ Signup
-    </button>
-    <button type="button" class="button-log btn custom" id="contact">
-      <i class="material-icons nav__icon">contact_support</i>
-      Contact Us
-    </button>
-    <button type="button" class="button-log btn custom" id="about">
-      <i class="material-icons nav__icon">storefront</i>
-      About Us
-    </button>
-  </div>
+
   <div class="container">
-    <div id="firebaseui-auth-container"></div>
+    <div id="paymethod">
+      <img src="./images/paypal.png"/>
+      <img src="./images/cod.png"/>
+    </div>
   </div>
+
+  
+
+
+
   <nav class="nav">
-    <a href="./index.html" class="nav__link">
+    <a href="./index.html" class="nav__link nav__link--active">
       <i class="material-icons nav__icon">home</i>
       <span class="nav__text">Home</span>
     </a>
-    <a href="./categories.html" class="nav__link">
+    <a href="./categories.html" class="nav__link nav__link">
       <i class="material-icons nav__icon">sports_mma</i>
       <span class="nav__text">Equipments</span>
     </a>
@@ -65,7 +78,7 @@
       <i class="material-icons nav__icon">play_circle</i>
       <span class="nav__text">Videos</span>
     </a>
-    <a href="./login.html" class="nav__link  nav__link--active">
+    <a href="./login.html" class="nav__link">
       <i class="material-icons nav__icon">person</i>
       <span class="nav__text">Account</span>
     </a>
@@ -80,18 +93,11 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-  <script src="scripts/firebase_api.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-storage.js"></script>
 
   <!--------------------------------------------------------------------->
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
-  <script src="scripts/login.js"></script>
-
+  <script src="./scripts/checkout.js"></script>
 </body>
 
 </html>
