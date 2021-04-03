@@ -1,7 +1,35 @@
+body {
+    overflow-x: hidden;
+}
+
 .header{
-    margin:3% 2% 1%;
+    margin:3% 0 1%;
 }
 
 h3 {
     font-size: 2rem;
+}
+
+.cart-main{
+    text-align: center;
+}
+
+#productImg{
+    width: 50% ;
+    height: auto;
+}
+
+.desc{
+    text-align: left;
+}
+
+.buy{
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+}
+
+.cartCost{
+    float: right;
+    margin-right: 20px;
 }

@@ -25,6 +25,7 @@
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="./styles/nav.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
+    <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
     <style>
       .welcome {
         margin-top: 20px;
@@ -62,10 +63,15 @@
         <p class="fw-light">PRODUCTS</p>
       </div>
 
-      <div class="cart-item container-fluid">
-        
+      <div class="container-fluid cart-main">
+        <div class="cart-item row">
+          
+          <!--Cart elments go-->
+        </div>
       </div>
     </div>
+
+    <button type="button" class="btn btn-lg btn-dark buy"><i class="fas fa-bolt"></i> Buy Now</button>
 
     <nav class="nav">
       <a href="./index.html" class="nav__link nav__link--active">
@@ -94,6 +100,12 @@
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <script src="scripts/firebase_api.js"></script>
     <script src="scripts/cart.js"></script>
 
     <!--------------------------------------------------------------------->
