@@ -13,9 +13,13 @@
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
   <!-- Optional styles and scripts of your own -->
   <link rel="stylesheet" href="./styles/nav.css" />
   <link rel="stylesheet" href="./styles/login.css" />
+  <link rel="stylesheet" href="./styles/search.css" />
+
+
 </head>
 
 <body>
@@ -25,8 +29,11 @@
       <div class="container-fluid">
         <a class="navbar-brand">JustRent</a>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-danger" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id = 
+          "searchbar">
+          <button type="button" class="btn btn-secondary" id ="search">
+            <i class="fas fa-search"></i>
+          </button>
         </form>
       </div>
     </nav>
@@ -91,6 +98,7 @@
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
   <script src="scripts/login.js"></script>
+  <script src="scripts/search.js"></script>
 
 </body>
 
