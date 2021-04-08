@@ -22,33 +22,43 @@ function readData() {
                 $(".wdth").text(doc.data().width);
                 $(".lgth").text(doc.data().lenght);
 
-function readData2 () {
-    var pid = localStorage.getItem('product'); 
-    db.collection("reviews").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            //console.log(doc);
-            if (doc.data().pid == pid) {
-                let x = doc.data().stars;
-                for (var j = 1; j <= x; j++) {
-                    $(".stars" + j).css("color", "orange");
-                    
+                
+                var slider = document.getElementById("weeks");
+                var output = document.getElementById("rent");
+
+
+                slider.oninput = function() {
+                    var x = this.value;
+                    var y = doc.data().cost;
+                    var p = x*y
+                    document.getElementById("xyz").innerHTML = p + " for " + x + " weeks";
+                    //console.log(y*x);
+                    if(x == 1) {
+                        output.innerHTML = "You want to rent it for " + x + " week";
+                    } else {    
+                    output.innerHTML = "You want to rent it for " + x + " weeks";
+                    }
+                    addCartListener(pid,x);
                 }
 
-                let z = doc.data().name;
-                var name = $('<div class = "name">' + (doc.data().name) + '</div>')
-                $("#review").append(name); 
-                
-                var stars = $('<div class="star"> <span class="fa fa-star stars1"></span> <span class="fa fa-star stars2"></span><span class="fa fa-star stars3"></span><span class="fa fa-star stars4"></span><span class="fa fa-star stars5"></span></div>');
-                $("#review").append(stars);
+                //addCartListener(pid,x);
 
-                let y = doc.data().description;
-                var description = $('<div class ="description">' + (doc.data().description) + '</div>')
-                $("#review").append(description); 
-
-            }
-        })
-    } )
-}
+                db.collection("reviews").get().then((querySnapshot) => {
+                    querySnapshot.forEach((doc) => {
+                        //console.log(doc);
+                        if (doc.data().pid == "db1") {
+                            let x = doc.data().stars;
+                            for (var j = 1; j <= x; j++) {
+                                $(".stars" + j).css("color", "orange");                    
+                            }
+                            var stars = $('<div class="star"> <span class="fa fa-star stars1"></span> <span class="fa fa-star stars2"></span><span class="fa fa-star stars3"></span><span class="fa fa-star stars4"></span><span class="fa fa-star stars5"></span></div>');
+                            $("#alen").append(stars);
+            
+                            var data = $()
+                        
+                        }
+                    })
+                } )
 
                 let review = firebase.database().ref("ratings");
                 document.getElementById("addReview").addEventListener("submit",submitReview);
