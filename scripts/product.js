@@ -21,16 +21,6 @@ function readData() {
                 $(".hght").text(doc.data().height);
                 $(".wdth").text(doc.data().width);
                 $(".lgth").text(doc.data().lenght);
-            });
-        })    
-}
-
-function starRating(x) {
-    for (var j = 1; j <= x; j++) {
-        $(".st" + j).css("color", "orange");
-    }
-
-}
 
 function readData2 () {
     var pid = localStorage.getItem('product'); 
@@ -60,49 +50,52 @@ function readData2 () {
     } )
 }
 
-readData2();
+                let review = firebase.database().ref("ratings");
+                document.getElementById("addReview").addEventListener("submit",submitReview);
+
+
+                function submitReview(e){
+                    e.preventDefault();
+                    var name = getIdVal("userName");
+                    var email = getIdVal("userEmail");
+                    var decrip = getIdVal("userDesc");
+                    var star = getIdVal("starsRate");
+                    var prodID = pid;
+
+                    saveReview(name, email, decrip, star, prodID);
+
+                    console.log(name + " " + email + " " + decrip + " " + star + " " + prodID);
+
+                    document.getElementById("reviewAlert").style.display = "block";
+
+                    setTimeout(function(){
+                        document.getElementById("reviewAlert").style.display = "none";
+                    },3000);
+
+                    document.getElementById("userName").value = " ";
+                    document.getElementById("userEmail").value = " ";
+                    document.getElementById("userDesc").value = " ";
+                    document.getElementById("starsRate").value = " ";
+                };
+
+            });
+        })    
+}
+
+function starRating(x) {
+    for (var j = 1; j <= x; j++) {
+        $(".st" + j).css("color", "orange");
+    }
+
+}
+
 readData();
-
-let review = firebase.database().ref("ratings");
-document.getElementById("addReview").addEventListener("submit",submitReview);
-
-
-function submitReview(e){
-    e.preventDefault();
-    var name = getIdVal("userName");
-    var email = getIdVal("userEmail");
-    var decrip = getIdVal("userDesc");
-    var star = getIdVal("starsRate");
-    var prodID = "db1";
-
-    saveReview(name, email, decrip, star, prodID);
-
-    console.log(name + " " + email + " " + decrip + " " + star + " " + prodID);
-
-    document.getElementById("reviewAlert").style.display = "block";
-
-    setTimeout(function(){
-        document.getElementById("reviewAlert").style.display = "none";
-    },3000);
-
-    document.getElementById("userName").value = " ";
-    document.getElementById("userEmail").value = " ";
-    document.getElementById("userDesc").value = " ";
-    document.getElementById("starsRate").value = " ";
-
-    // $("#addReview").trigger('reset');
-    // getIdVal("userName").value = "";
-    // document.getElementById("addReview").reset()
-    
-};
 
 function getIdVal(id){
     return document.getElementById(id).value;
 }
 
-function saveReview(name, email, decrip, star, prodID){
-
-    // db.collection("reviews").push();
+function saveReview(name, email, decrip, star, prodID){   
     
     db.collection("reviews").add({         //write to firestore
         description : decrip,
@@ -110,41 +103,12 @@ function saveReview(name, email, decrip, star, prodID){
         name : name,
         stars : star,
         pid : prodID,                          //with authenticated user's ID (user.uid)
+    });    
+}
+
+function addCartListener(id,week) {
+    document.getElementById("Add-to-cart").addEventListener("click", function () {
+      console.log("Add-to-cart was clicked!");     
+      window.location.assign("cart.html?id=" + id +"&week=" + week);   
     });
-    
-    // let newReview = review.push();
-    
-    // newReview.set({
-    //     description : decrip,
-    //     email : email,
-    //     name : name,
-    //     stars : star,
-    //     pid : prodID,
-    // })
-}
-
-var slider = document.getElementById("weeks");
-var output = document.getElementById("rent");
-
-
-slider.oninput = function() {
-    var x = this.value;
-    db.collection("equipments")
-    .doc("db1")
-    .get()
-    .then(function (doc){
-        var y = doc.data().cost;
-        var p = x*y
-        document.getElementById("xyz").innerHTML = p + " for " + x + " weeks";
-        console.log(y*x);
-
-    }) 
-
-    if(x == 1){
-        output.innerHTML = "You want to rent it for " + x + " week";
-    }
-
-    else{    
-    output.innerHTML = "You want to rent it for " + x + " weeks";
-    }
-}
+  }
