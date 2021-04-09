@@ -134,6 +134,12 @@ function addCartListener(id,week) {
                 "pid" : id,
                 "week" : week
             });
+            document.getElementById("cartAlert").innerHTML = `<strong>Product added to your Cart!</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+            document.getElementById("cartAlert").style.display = "block";
+
+            setTimeout(function(){
+                 document.getElementById("cartAlert").style.display = "none";
+            },3000);
         } else {
             console.log("Login in first");
         }

@@ -45,3 +45,7 @@ hr {
   content: '5';
 
 }
+
+#cartAlert {
+  display: none;
+}
