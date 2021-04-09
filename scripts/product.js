@@ -41,7 +41,7 @@ function readData() {
                     addCartListener(pid,x);
                 }
 
-                //addCartListener(pid,x);
+                
 
                 db.collection("reviews").get().then((querySnapshot) => {
                     querySnapshot.forEach((doc) => {
@@ -125,6 +125,18 @@ function saveReview(name, email, decrip, star, prodID){
 function addCartListener(id,week) {
     document.getElementById("Add-to-cart").addEventListener("click", function () {
       console.log("Add-to-cart was clicked!");     
-      window.location.assign("cart.html?id=" + id +"&week=" + week);   
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            console.log(id,week,user.uid);
+            var users = db.collection("cart").doc();
+            users.set({
+                "user" : user.uid,
+                "pid" : id,
+                "week" : week
+            });
+        } else {
+            console.log("Login in first");
+        }
+      });  
     });
   }
