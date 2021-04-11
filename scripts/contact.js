@@ -19,5 +19,14 @@ function submitReview(e) {
     let mess = document.querySelector("#userMessage").value;
     
     saveRequest(mail,mess);
+
+    document.querySelector("#alrt").style.display = "block";
+
+    setTimeout(function(){
+        document.querySelector("#alrt").style.display = "none";
+    },3000);
+
+    document.querySelector("#userEmail").value = "";
+    document.querySelector("#userMessage").value = "";
 }
 
