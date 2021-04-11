@@ -19,9 +19,12 @@
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
+
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="./styles/nav.css"/>
     <link rel="stylesheet" href="./styles/products.css"/>
+    <link rel="stylesheet" href="./styles/search.css" />
     <style>
       .welcome {
         margin-top: 20px;
@@ -41,13 +44,11 @@
         <div class="container-fluid">
           <a class="navbar-brand">JustRent</a>
           <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-danger" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id = 
+          "searchbar">
+          <button type="button" class="btn btn-secondary" id ="search">
+            <i class="fas fa-search"></i>
+          </button>
           </form>
         </div>
       </nav>
@@ -95,6 +96,7 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
   <script src="scripts/firebase_api.js"></script>
   <script src="scripts/dumbbells.js"></script>
+  <script src="scripts/search.js"></script>
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--

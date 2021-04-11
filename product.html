@@ -15,6 +15,7 @@
   <title>Product Page</title>
   <link rel="stylesheet" href="./styles/nav.css" />
   <link rel="stylesheet" href="./styles/product.css" />
+  <link rel="stylesheet" href="./styles/search.css" />
   <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
 
 </head>
@@ -26,8 +27,11 @@
       <div class="container-fluid">
         <a class="navbar-brand">JustRent</a>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-danger" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id = 
+          "searchbar">
+          <button type="button" class="btn btn-secondary" id ="search">
+            <i class="fas fa-search"></i>
+          </button>
         </form>
       </div>
     </nav>
@@ -260,6 +264,7 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
   <script src="scripts/firebase_api.js"></script>
   <script src="scripts/product.js"></script>
+  <script src="scripts/search.js"></script>
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--

@@ -18,10 +18,13 @@
       crossorigin="anonymous"
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="./styles/nav.css"/>
     <link rel="stylesheet" href="./styles/covid.css"/>
+    <link rel="stylesheet" href="./styles/covidguidelines.css">
+    <link rel="stylesheet" href="./styles/search.css" />
     <style>
       .welcome {
         margin-top: 20px;
@@ -41,21 +44,19 @@
         <div class="container-fluid">
           <a class="navbar-brand">JustRent</a>
           <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-danger" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id = 
+          "searchbar">
+          <button type="button" class="btn btn-secondary" id ="search">
+            <i class="fas fa-search"></i>
+          </button>
           </form>
         </div>
       </nav>
     </div>
     <div id="info">
-      <h1 class="text-center">COVID-19 Guidelines</h1>
-      <p class="text-center">
-        The following are guidelines that our business is imposing during COVID-19
+      <h1 class="text-center display-3">COVID-19 Guidelines</h1>
+      <p class="text-center display-3 fst-italic banner">
+        We Are Taking All Safety Measures To Ensure Safe Delivery!
       </p>
     </div>
     <div class="container">
@@ -63,34 +64,28 @@
             <div class="col-sm">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <h3>COVID-19</h3>
-                        <p class="fw-bold">a. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
-                        <p class="fw-bold">b. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
-                        <p class="fw-bold">c. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
+                      <h1 class="display-4 fst-italic"></h1>
                     </li>
                     <li class="list-group-item">
                         <h3>Steps to Reducing COVID-19 Transmission </h3>
-                        <p class="fw-bold">a. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
-                        <p class="fw-bold">b. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
-                        <p class="fw-bold">c. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
+                        <p class="fw-bold">1. Maintaining social distance</p>
+                        <p class="fw-normal">At our offices and warehouses, our employees are keeping the mandatory 6 feet distance between each other while doing all the activities.</p>
+                        <p class="fw-bold">2. Vigorous disinfecting of premises</p>
+                        <p class="fw-normal">We disinfect our premises and our warehouses every day with bleach. Disinfecting agents like bleach can kill all forms of viruses and other pathogens so that they can never make their way to your products.</p>
+                        <p class="fw-bold">3. The staff wears masks </p>
+                        <p class="fw-normal">All employees involved in restocking and packaging wear masks to prevent package contamination. Your package and its contents are in safe hands.</p>
                     </li>
                     <li class="list-group-item">
                         <h3>Equipment Safety during COVID-19</h3>
-                        <p class="fw-bold">a. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
-                        <p class="fw-bold">b. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
-                        <p class="fw-bold">c. ------------</p>
-                        <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
+                        <p class="fw-bold">1. Contactless delivery</p>
+                        <p class="fw-normal">What makes purchasing from JustRent an experience free from worries is that we offer contactless delivery. Our delivery partners will deliver the package at your doorstep. You will not come into contact with the partner, so there is no fear of you getting infected.</p>
+                        <p class="fw-bold">2. Protective gear for delivery partners</p>
+                        <p class="fw-normal">This is another safety measure we adopt alongside temperature check. Our riders always wear masks and gloves for added protection.</p>
+                        <p class="fw-bold">3. Our delivery partners wash their hands</p>
+                        <p class="fw-normal">Before setting off with your products, our delivery partners carefully and thoroughly clean their hands with hand sanitizers that they always carry with them. After each delivery, the partners once again clean their hands before embarking on the next delivery run.</p>
                     </li>
                     <li class="list-group-item">
-                        <h3>Health and Sanitation Guidelines</h3>
+                        <h3>Measures In Place For employees And Supply Chain Staff</h3>
                         <p class="fw-bold">a. ------------</p>
                         <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quia! Repellendus accusamus provident blanditiis aliquam omnis quaerat veniam et quo.</p>
                         <p class="fw-bold">b. ------------</p>
@@ -141,6 +136,8 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"
   ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="scripts/search.js"></script>
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--

@@ -21,10 +21,11 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-
+    
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="./styles/nav.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/search.css" />
     <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
     <style>
       .welcome {
@@ -45,13 +46,11 @@
         <div class="container-fluid">
           <a class="navbar-brand">JustRent</a>
           <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-danger" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id = 
+          "searchbar">
+          <button type="button" class="btn btn-secondary" id ="search">
+            <i class="fas fa-search"></i>
+          </button>
           </form>
         </div>
       </nav>
@@ -107,6 +106,7 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
     <script src="scripts/firebase_api.js"></script>
     <script src="scripts/cart.js"></script>
+    <script src="scripts/search.js"></script>
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
