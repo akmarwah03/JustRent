@@ -33,3 +33,26 @@ h3 {
     float: right;
     margin-right: 20px;
 }
+
+.pimg{
+    width: 150px;
+    height: auto;
+}
+
+.info{
+    text-align: left;
+    margin-left: 0;
+}
+
+.tco{
+    position: relative;
+    left: 100px;
+}
+
+.des{
+    font-size: 0.75rem;
+}
+
+h4{
+    font-size: 1rem;
+}

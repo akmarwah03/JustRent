@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 #info{
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../images/loginbg.jpg);
     background-position: center;
@@ -14,7 +13,7 @@
     grid-template-rows: repeat(3,1fr);
     align-items: center;
     justify-items: center;
-    color: white;
+    color: #C70039;
     margin-bottom: 30px;
 }
 
@@ -23,7 +22,7 @@
     width: 100px;
     height: auto;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid #F37121;
 }
 
 #username{
@@ -41,13 +40,21 @@
 .custom{
     width: 85%;
     padding: 10px;
-    background-color: #ffb371;
+    background-color: #111D5E;
     text-align: start;
 }
 
 .custom i{
     vertical-align:middle;
     font-size: 22px;
+}
+
+.btns{
+    color: #C0E218;
+}
+
+.ico{
+    color: #F37121;
 }
 
 

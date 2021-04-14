@@ -1,3 +1,7 @@
+body{
+  color: #732138;
+}
+
 .main {
   margin: 6% auto;
 }
@@ -41,6 +45,20 @@ hr {
 
 }
 
+#weeks::-webkit-slider-thumb {
+  background: #C0E218;
+}
+
+#weeks::-moz-range-thumb {
+  background: #C0E218;
+}
+
+#weeks::-ms-thumb {
+  background: #C0E218;
+}
+
+
+
 #weeks ::after{
   content: '5';
 
@@ -48,4 +66,15 @@ hr {
 
 #cartAlert {
   display: none;
+}
+
+.rent{
+  background: #C70039;
+  color: #C0E218;
+  border: #C70039;
+}
+
+#Add-to-cart{
+  color: #C70039;
+  border: 1px solid #C70039;
 }

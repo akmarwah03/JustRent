@@ -66,7 +66,7 @@ function readData() {
                     })
                 } )
 
-                let review = firebase.database().ref("ratings");
+                
                 document.getElementById("addReview").addEventListener("submit",submitReview);
 
 
