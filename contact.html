@@ -13,10 +13,10 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
+
     <!-- Optional styles and scripts of your own -->
-    <link rel="stylesheet" href="./styles/nav.css"/>
-    <link rel="stylesheet" href="./styles/contact.css"/>
-    <link rel="stylesheet" href="./styles/search.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
     <style>
         .welcome {
             margin-top: 20px;
@@ -29,7 +29,7 @@
         }
 
         .form {
-            margin-left : 20px;
+            margin-left: 20px;
         }
     </style>
 
@@ -41,12 +41,12 @@
         <nav class="navbar sticky-top navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand">JustRent</a>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id = 
-          "searchbar">
-          <button type="button" class="btn btn-secondary" id ="search">
-            <i class="fas fa-search"></i>
-          </button>
+                <form class="d-flex" id="searchform">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        id="searchbar" name="searchbar">
+                    <button type="button" class="btn btn-secondary" id="search">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </form>
             </div>
         </nav>
@@ -56,7 +56,8 @@
         <h1 class="display-4 welcome"><b>Contact Us</b></h1>
 
         <div class="btn-group links btn-group-lg" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-outline-light" onclick="document.location='./covidguidelines.html'">COVID Guidelines</button>
+            <button type="button" class="btn btn-outline-light"
+                onclick="document.location='./covidguidelines.html'">COVID Guidelines</button>
             <button type="button" class="btn btn-warning" onclick="document.location='./faq.html'">FAQs</button>
         </div>
 
@@ -72,7 +73,7 @@
                 <div class="card">
                     <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Text <br/> Live Agent</h5>
+                        <h5 class="card-title">Text <br /> Live Agent</h5>
                     </div>
                 </div>
             </div>
@@ -81,7 +82,9 @@
                 <div class="card">
                     <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Phone <br/> Live Agent</h5>
+                        <a href="tel:555-123-4567">
+                            <h5 class="card-title">Phone <br /> Live Agent</h5>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -111,22 +114,22 @@
     </div>
     <nav class="nav">
         <a href="./index.html" class="nav__link">
-          <i class="material-icons nav__icon">home</i>
-          <span class="nav__text">Home</span>
+            <i class="material-icons nav__icon">home</i>
+            <span class="nav__text">Home</span>
         </a>
         <a href="./categories.html" class="nav__link">
-          <i class="material-icons nav__icon">sports_mma</i>
-          <span class="nav__text">Equipments</span>
+            <i class="material-icons nav__icon">sports_mma</i>
+            <span class="nav__text">Equipments</span>
         </a>
         <a href="./cart.html" class="nav__link">
-          <i class="material-icons nav__icon">shopping_cart</i>
-          <span class="nav__text">Cart</span>
+            <i class="material-icons nav__icon">shopping_cart</i>
+            <span class="nav__text">Cart</span>
         </a>
         <a href="./login.html" class="nav__link  nav__link--active">
-          <i class="material-icons nav__icon">person</i>
-          <span class="nav__text">Account</span>
+            <i class="material-icons nav__icon">person</i>
+            <span class="nav__text">Account</span>
         </a>
-      </nav>
+    </nav>
 
 
 
@@ -149,7 +152,7 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-
+    <script src="scripts/search.js"></script>
 </body>
 
 </html>

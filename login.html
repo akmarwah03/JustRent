@@ -28,9 +28,9 @@
     <nav class="navbar sticky-top navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand">JustRent</a>
-        <form class="d-flex">
+        <form class="d-flex" id="searchform">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id = 
-          "searchbar">
+          "searchbar" name="searchbar">
           <button type="button" class="btn btn-secondary" id ="search">
             <i class="fas fa-search"></i>
           </button>
@@ -92,7 +92,6 @@
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
   <script src="scripts/firebase_api.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-storage.js"></script>
 
   <!--------------------------------------------------------------------->
   <!-- JS files: Your own JavaScript functions included here    -->
