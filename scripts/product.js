@@ -20,7 +20,7 @@ function readData() {
 
                 $(".hght").text(doc.data().height);
                 $(".wdth").text(doc.data().width);
-                $(".lgth").text(doc.data().lenght);
+                $(".lgth").text(doc.data().length);
 
                 
                 var slider = document.getElementById("weeks");

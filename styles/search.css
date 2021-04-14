@@ -2,3 +2,13 @@
 {
     display: none;
 }
+
+#search{
+    color: #C0E218;
+    background: #732138;
+}
+
+.brand{
+    color: #C70039;
+    font-weight: bold;    
+}
