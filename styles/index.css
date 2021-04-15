@@ -1,0 +1,26 @@
+body{
+    overflow-x: hidden;
+    color: #732138;
+}
+
+#dsp{
+    width: 125px;
+    height: auto;
+}
+
+#txt{
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #732138;
+}
+
+.welcome{
+    margin: 7% auto 15%;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.btm{
+    position: fixed;
+}
