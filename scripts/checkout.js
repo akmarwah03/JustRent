@@ -33,13 +33,17 @@ function getProduct() {
 
 getProduct();
 
-$(".checker").click(() => {
+document.querySelector('#cc').addEventListener('submit', (e) => {
+    e.preventDefault();
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             var users = db.collection("cart").where("user", "==", user.uid);
             users.get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
-                    db.collection("orders").doc(doc.uid).set(doc.data());
+                    let form = document.getElementById("cc");
+                    let formData = new FormData(form);
+                    let data = Object.assign(doc.data(),{status: "placed", ccname: formData.get('name'),expm: formData.get('expm'),expy: formData.get('expy'),ccnum: formData.get('num'),ccCvc: formData.get('cvc')});
+                    db.collection("orders").doc(doc.uid).set(data);
                     doc.ref.delete();
                 });
             });
