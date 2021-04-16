@@ -9,7 +9,9 @@ function readData() {
             querySnapshot.forEach((doc) => {
                 
                 //console.log(doc.id, " => ", doc.data());
-                $("img.pimg").attr("src", doc.data().imgurl);
+                $("img#img1").attr("src", doc.data().imgurl);
+                $("img#img2").attr("src", doc.data().imgurl1);
+                $("img#img3").attr("src", doc.data().imgurl2);
                 $("h1.prd-name").text(doc.data().name);
                 $(".desc").text(doc.data().category);
                 $(".cost").text(doc.data().cost);
