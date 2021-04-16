@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My BCIT Project</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="author" content="BCIT">
+    <title>JustRent</title>
+    <meta name="comp1800" content="my bcit project" />
+    <meta name="author" content="Akshay Marwah, Parth Chaturvedi & Alen Rusi" />
 
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,26 +18,10 @@
     <link rel="stylesheet" href="./styles/search.css" />
     <link rel="stylesheet" href="./styles/nav.css" />
     <link rel="stylesheet" href="./styles/contact.css" />
-    <style>
-        .welcome {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .gridCards {
-            margin-top: 5px;
-            margin-bottom: 50px;
-        }
-
-        .form {
-            margin-left: 20px;
-        }
-    </style>
 
 </head>
 
 <body>
-
     <div class="container">
         <nav class="navbar sticky-top navbar-light bg-light">
             <div class="container-fluid">
@@ -52,16 +36,13 @@
             </div>
         </nav>
     </div>
-
     <div id="info">
         <h1 class="display-4 welcome"><b>Contact Us</b></h1>
-
         <div class="btn-group links btn-group-lg" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-outline-light"
                 onclick="document.location='./covidguidelines.html'">COVID Guidelines</button>
             <button type="button" class="btn btn-warning" onclick="document.location='./faq.html'">FAQs</button>
         </div>
-
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -78,7 +59,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col">
                 <div class="card">
                     <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
@@ -89,13 +69,9 @@
                     </div>
                 </div>
             </div>
-                </div>
-            </div>
-        
-
-    
-
-    <form class = "form contct" id="cont">
+        </div>
+    </div>
+    <form class="form contct" id="cont">
         <h2>Contact Form</h2>
         <div class="alert alert-info" role="alert" id="alrt">
             <strong>Request submitted!</strong> Our team will contact you soon.
@@ -103,15 +79,15 @@
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
             <input type="email" class="form-control" id="userEmail" required>
-          </div>
-          <div class="mb-3">
+        </div>
+        <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
-            <textarea class="form-control" id="userMessage" rows="3" placeholder="You will be contacted within 5 working days" required></textarea>
-          </div>        
+            <textarea class="form-control" id="userMessage" rows="3"
+                placeholder="You will be contacted within 5 working days" required></textarea>
+        </div>
         <button type="submit" class="btn btn-outline-dark sub" id="subm">Submit</button>
-      </form>
-
-      <br/><br/><br/>
+    </form>
+    <br /><br /><br />
     </div>
     <nav class="nav">
         <a href="./index.html" class="nav__link">
@@ -132,27 +108,25 @@
         </a>
     </nav>
 
-
-
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-  <script src="scripts/firebase_api.js"></script>
-    <script src="scripts/search.js"></script>
-    <script src="scripts/contact.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <script src="scripts/firebase_api.js"></script>
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+    <script src="scripts/search.js"></script>
+    <script src="scripts/contact.js"></script>
     <script src="scripts/search.js"></script>
 </body>
 

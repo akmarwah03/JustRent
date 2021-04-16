@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>My BCIT Project</title>
-  <meta name="comp1800 boilerplate code" content="my bcit project">
-  <meta name="author" content="BCIT">
+  <title>JustRent</title>
+  <meta name="comp1800" content="my bcit project" />
+  <meta name="author" content="Akshay Marwah, Parth Chaturvedi & Alen Rusi" />
 
   <!-- Bootstrap for Mobile-first, and JQuery -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,7 +33,6 @@
 </head>
 
 <body>
-
   <div class="container">
     <nav class="navbar sticky-top navbar-light bg-light">
       <div class="container-fluid">
@@ -44,11 +43,10 @@
           <button type="button" class="btn btn-secondary" id="search">
             <i class="fas fa-search"></i>
           </button>
-          </form>
+        </form>
       </div>
     </nav>
   </div>
-
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -70,20 +68,8 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
   <div class="welcome">Welcome to JustRent</div>
-
   <div class="container">
-    <!-- <div class="row">
-      <div class="col-6 images">
-        <img src="./images/pexels-ketut-subiyanto-4473622.jpg" alt="" id="img1">
-      </div>
-      <div class="col-6 images">
-        <a href="./categories.html" class="txt">
-          Check out our awesome new products!
-        </a>
-      </div>
-    </div> -->
     <div class="row crd">
       <div class="card crd" style="width: 18rem;">
         <img src="./images/pexels-ketut-subiyanto-4473622.jpg" class="card-img-top" alt="...">
@@ -92,49 +78,15 @@
         </div>
       </div>
     </div>
-  
-
-  <div class="row crd">
-    <div class="card crd" style="width: 18rem;">
-      <img src="./images/pexels-karolina-grabowska-4498606.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <a href="./contact.html" class="card-text txt">Reach out to us or read our faqs</a>
+    <div class="row crd">
+      <div class="card crd" style="width: 18rem;">
+        <img src="./images/pexels-karolina-grabowska-4498606.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="./contact.html" class="card-text txt">Reach out to us or read our faqs</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-      <!-- <div class="col">
-        <div class="card">
-          <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dumbbels</h5>
-          </div>
-        </div>
-      </div> -->
-      <!-- <div class="col">
-        <div class="card">
-          <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Barbells</h5>
-          </div>
-        </div>
-      </div> -->
-      <!-- <div class="col">
-        <div class="card">
-          <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Yoga Mats</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Aerobic Stepper</h5>
-          </div>
-        </div> -->
-      <!-- </div> -->
   <nav class="nav">
     <a href="./index.html" class="nav__link nav__link--active">
       <i class="material-icons nav__icon">home</i>
@@ -154,8 +106,6 @@
     </a>
   </nav>
 
-
-
   <!----------------------------------------------->
   <!-- JS: Boostrap, Firebase, API related    -->
   <!----------------------------------------------->
@@ -168,18 +118,18 @@
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
   <script src="scripts/firebase_api.js"></script>
-  <script src="scripts/search.js"></script>
-  <script src="scripts/index.js"></script>
 
   <!--------------------------------------------------------------------->
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
+  <script src="scripts/search.js"></script>
+  <script src="scripts/index.js"></script>
   <script>
     firebase.auth().onAuthStateChanged(function (user) {
-          if (user) {
-            $("#name-here").html(user.displayName);
-          }
-        })
+      if (user) {
+        $("#name-here").html(user.displayName);
+      }
+    })
   </script>
 </body>
 
