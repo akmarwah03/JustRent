@@ -42,7 +42,14 @@ document.querySelector('#cc').addEventListener('submit', (e) => {
                 querySnapshot.forEach(function (doc) {
                     let form = document.getElementById("cc");
                     let formData = new FormData(form);
-                    let data = Object.assign(doc.data(),{status: "placed", ccname: formData.get('name'),expm: formData.get('expm'),expy: formData.get('expy'),ccnum: formData.get('num'),ccCvc: formData.get('cvc')});
+                    let data = Object.assign(doc.data(), {
+                        status: "placed",
+                        ccname: formData.get('name'),
+                        expm: formData.get('expm'),
+                        expy: formData.get('expy'),
+                        ccnum: formData.get('num'),
+                        ccCvc: formData.get('cvc')
+                    });
                     db.collection("orders").doc(doc.uid).set(data);
                     doc.ref.delete();
                 });

@@ -1,32 +1,27 @@
-console.log("working");
-
 function saveRequest(uEmail, uMessage) {
 
     db.collection("contact").add({
-        email : uEmail,
-        message : uMessage,
+        email: uEmail,
+        message: uMessage,
     });
-    console.log("Request saved -> " + uEmail + ", " + uMessage);
 }
 
-document.getElementById("cont").addEventListener("submit",submitReview);
+document.getElementById("cont").addEventListener("submit", submitReview);
 
 function submitReview(e) {
     e.preventDefault();
-    console.log("Submit clicked");
 
     let mail = document.querySelector("#userEmail").value;
     let mess = document.querySelector("#userMessage").value;
-    
-    saveRequest(mail,mess);
+
+    saveRequest(mail, mess);
 
     document.querySelector("#alrt").style.display = "block";
 
-    setTimeout(function(){
+    setTimeout(function () {
         document.querySelector("#alrt").style.display = "none";
-    },3000);
+    }, 3000);
 
     document.querySelector("#userEmail").value = "";
     document.querySelector("#userMessage").value = "";
 }
-

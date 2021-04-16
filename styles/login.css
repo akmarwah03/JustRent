@@ -1,23 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#info{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../images/loginbg.jpg);
+#info {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/loginbg.jpg);
     background-position: center;
     height: 250px;
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
     color: #C70039;
     margin-bottom: 30px;
 }
 
-#user{
+#user {
     margin-top: 50px;
     width: 100px;
     height: auto;
@@ -25,37 +25,34 @@
     border: 5px solid #F37121;
 }
 
-#username{
+#username {
     margin-top: 20px;
     align-self: start;
 }
 
-.links{
+.links {
     display: grid;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 1em;
     justify-items: center;
 }
 
-.custom{
+.custom {
     width: 85%;
     padding: 10px;
     background-color: #111D5E;
     text-align: start;
 }
 
-.custom i{
-    vertical-align:middle;
+.custom i {
+    vertical-align: middle;
     font-size: 22px;
 }
 
-.btns{
+.btns {
     color: #C0E218;
 }
 
-.ico{
+.ico {
     color: #F37121;
 }
-
-
-

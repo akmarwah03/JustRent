@@ -2,28 +2,28 @@ body {
     overflow-x: hidden;
 }
 
-.header{
-    margin:3% 0 1%;
+.header {
+    margin: 3% 0 1%;
 }
 
 h3 {
     font-size: 2rem;
 }
 
-.cart-main{
+.cart-main {
     text-align: center;
 }
 
-#productImg{
-    width: 50% ;
+#productImg {
+    width: 50%;
     height: auto;
 }
 
-.desc{
+.desc {
     text-align: left;
 }
 
-.buy{
+.buy {
     color: #C70039;
     background: #C0E218;
     border: 1px solid #C0E218;
@@ -32,30 +32,30 @@ h3 {
     bottom: 65px;
 }
 
-.cartCost{
+.cartCost {
     float: right;
     margin-right: 20px;
 }
 
-.pimg{
+.pimg {
     width: 150px;
     height: auto;
 }
 
-.info{
+.info {
     text-align: left;
     margin-left: 0;
 }
 
-.tco{
+.tco {
     position: relative;
     left: 65%;
 }
 
-.des{
+.des {
     font-size: 0.75rem;
 }
 
-h4{
+h4 {
     font-size: 1rem;
 }

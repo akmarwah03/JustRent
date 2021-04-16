@@ -15,20 +15,12 @@ function getProduct() {
                                 var cost = doc.data().cost;
                                 var urlImg = doc.data().imgurl;
                                 var calcCost = week * cost;
-                                
                                 var row = $("<div class='cart-item row'></div><hr>");
                                 $(".cart-main").append(row);
                                 var productImage = $("<div class='col'><img id='productImg' src=" + urlImg + " alt='Product image'></div>");
                                 $(".row").append(productImage);
                                 var info = $("<div class='col info'><h4>" + name + "</h4><p class='des'>for " + week + " at $" + cost + "/week<p/><strong class='tco'>$ " + calcCost + "</strong>");
-                                $(".row").append(info); 
-
-                                console.log(name + " => " + calcCost);
-                                // var productImage = $("<div class='col-sm-3'><img id='productImg' src=" + urlImg + " alt='Product image'></div>");
-                                // $(".cart-main").append(productImage);
-                                // var productDescip = $("<div class='col-sm-6 desc'><h4>" + name + "</h4><br><p class='cartCost'>$" +
-                                //     calcCost + " for " + week + " weeks</p></div>");
-                                // $(".cart-main").append(productDescip);
+                                $(".row").append(info);
                             })
                     });
                 });

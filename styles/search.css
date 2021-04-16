@@ -1,14 +1,13 @@
-#searchbar 
-{
+#searchbar {
     display: none;
 }
 
-#search{
+#search {
     color: #C0E218;
     background: #732138;
 }
 
-.brand{
+.brand {
     color: #C70039;
-    font-weight: bold;    
+    font-weight: bold;
 }

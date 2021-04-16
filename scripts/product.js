@@ -1,14 +1,11 @@
-//console.log("hello");
-
 function readData() {
-    var pid = localStorage.getItem('product'); 
+    var pid = localStorage.getItem('product');
     db.collection("equipments")
         .where("pid", "==", pid)
         .get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                
-                //console.log(doc.id, " => ", doc.data());
+
                 $("img#img1").attr("src", doc.data().imgurl);
                 $("img#img2").attr("src", doc.data().imgurl1);
                 $("img#img3").attr("src", doc.data().imgurl2);
@@ -24,30 +21,30 @@ function readData() {
                 $(".wdth").text(doc.data().width);
                 $(".lgth").text(doc.data().length);
 
-                
+
                 var slider = document.getElementById("weeks");
                 var output = document.getElementById("rent");
 
 
-                slider.oninput = function() {
+                slider.oninput = function () {
                     var x = this.value;
                     var y = doc.data().cost;
-                    var p = x*y
+                    var p = x * y
                     document.getElementById("xyz").innerHTML = p + " for " + x + " weeks";
-                    //console.log(y*x);
-                    if(x == 1) {
+
+                    if (x == 1) {
                         output.innerHTML = "You want to rent it for " + x + " week";
-                    } else {    
-                    output.innerHTML = "You want to rent it for " + x + " weeks";
+                    } else {
+                        output.innerHTML = "You want to rent it for " + x + " weeks";
                     }
-                    addCartListener(pid,x);
+                    addCartListener(pid, x);
                 }
 
-                
+
 
                 db.collection("reviews").get().then((querySnapshot) => {
                     querySnapshot.forEach((doc) => {
-                        //console.log(doc);
+
                         if (doc.data().pid == pid) {
 
                             var row = $("<div class='row'></div>");
@@ -64,29 +61,29 @@ function readData() {
 
                             let x = doc.data().stars;
                             for (var j = 1; j <= x; j++) {
-                                $(".stars" + j).css("color", "orange");                    
+                                $(".stars" + j).css("color", "orange");
                             }
 
                             let z = doc.data().name;
                             var name = $('<div class = "name">' + (doc.data().name) + '</div>')
-                            $(col2).append(name); 
-                
+                            $(col2).append(name);
+
                             var stars = $('<div class="star"> <span class="fa fa-star stars1"></span> <span class="fa fa-star stars2"></span><span class="fa fa-star stars3"></span><span class="fa fa-star stars4"></span><span class="fa fa-star stars5"></span></div>');
                             $(col2).append(stars);
-                
+
                             let y = doc.data().description;
                             var description = $('<div class ="description">' + (doc.data().description) + '</div>')
-                            $(row2).append(description); 
-                        
+                            $(row2).append(description);
+
                         }
                     })
-                } )
-
-                
-                document.getElementById("addReview").addEventListener("submit",submitReview);
+                })
 
 
-                function submitReview(e){
+                document.getElementById("addReview").addEventListener("submit", submitReview);
+
+
+                function submitReview(e) {
                     e.preventDefault();
                     var name = getIdVal("userName");
                     var email = getIdVal("userEmail");
@@ -96,13 +93,11 @@ function readData() {
 
                     saveReview(name, email, decrip, star, prodID);
 
-                    console.log(name + " " + email + " " + decrip + " " + star + " " + prodID);
-
                     document.getElementById("reviewAlert").style.display = "block";
 
-                    setTimeout(function(){
+                    setTimeout(function () {
                         document.getElementById("reviewAlert").style.display = "none";
-                    },3000);
+                    }, 3000);
 
                     document.getElementById("userName").value = " ";
                     document.getElementById("userEmail").value = " ";
@@ -111,7 +106,7 @@ function readData() {
                 };
 
             });
-        })    
+        })
 }
 
 function starRating(x) {
@@ -123,42 +118,41 @@ function starRating(x) {
 
 readData();
 
-function getIdVal(id){
+function getIdVal(id) {
     return document.getElementById(id).value;
 }
 
-function saveReview(name, email, decrip, star, prodID){   
-    
-    db.collection("reviews").add({         //write to firestore
-        description : decrip,
-        email : email,
-        name : name,
-        stars : star,
-        pid : prodID,                          //with authenticated user's ID (user.uid)
-    });    
+function saveReview(name, email, decrip, star, prodID) {
+
+    db.collection("reviews").add({
+        description: decrip,
+        email: email,
+        name: name,
+        stars: star,
+        pid: prodID,
+    });
 }
 
-function addCartListener(id,week) {
+function addCartListener(id, week) {
     document.getElementById("Add-to-cart").addEventListener("click", function () {
-      console.log("Add-to-cart was clicked!");     
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            console.log(id,week,user.uid);
-            var users = db.collection("cart").doc();
-            users.set({
-                "user" : user.uid,
-                "pid" : id,
-                "week" : week
-            });
-            document.getElementById("cartAlert").innerHTML = `<strong>Product added to your Cart!</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
-            document.getElementById("cartAlert").style.display = "block";
+        console.log("Add-to-cart was clicked!");
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                var users = db.collection("cart").doc();
+                users.set({
+                    "user": user.uid,
+                    "pid": id,
+                    "week": week
+                });
+                document.getElementById("cartAlert").innerHTML = `<strong>Product added to your Cart!</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+                document.getElementById("cartAlert").style.display = "block";
 
-            setTimeout(function(){
-                 document.getElementById("cartAlert").style.display = "none";
-            },3000);
-        } else {
-            console.log("Login in first");
-        }
-      });  
+                setTimeout(function () {
+                    document.getElementById("cartAlert").style.display = "none";
+                }, 3000);
+            } else {
+                console.log("Login in first");
+            }
+        });
     });
-  }
+}

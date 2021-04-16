@@ -1,4 +1,4 @@
-body{
+body {
   color: #732138;
 }
 
@@ -45,7 +45,7 @@ hr {
 
 }
 
-#review{
+#review {
   margin-top: 25px;
 }
 
@@ -61,7 +61,7 @@ hr {
   background: #C0E218;
 }
 
-#weeks ::after{
+#weeks ::after {
   content: '5';
 }
 
@@ -69,13 +69,13 @@ hr {
   display: none;
 }
 
-.rent{
+.rent {
   background: #C70039;
   color: #C0E218;
   border: #C70039;
 }
 
-#Add-to-cart{
+#Add-to-cart {
   color: #C70039;
   border: 1px solid #C70039;
 }

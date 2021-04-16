@@ -1,19 +1,20 @@
-#info{
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(../images/barbell.jpg);
+#info {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/barbell.jpg);
     background-position: center;
     height: 250px;
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
     color: white;
     margin-bottom: 30px;
 }
 
-#info h1{
+#info h1 {
     margin-top: 55px;
 }
-#info p{
+
+#info p {
     padding: 0 15px;
 }
 
@@ -88,22 +89,22 @@ a {
     border-radius: .2rem
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
     color: #be6312;
     border-color: #be6312;
 }
 
-.card-title{
+.card-title {
     float: left;
     width: 70%;
 }
 
-.text-muted{
+.text-muted {
     float: none;
     margin-bottom: 0;
 }
 
-.rightbt{
+.rightbt {
     float: right;
     width: 30%;
     margin-top: 10px;

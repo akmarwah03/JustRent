@@ -2,8 +2,7 @@ db.collection("equipments").get().then((querySnapshot) => {
     let group = $('<div class="row row-cols-1 row-cols-md-2 g-4"></div>');
     $('#main').append(group);
     let search = localStorage.getItem("search");
-    console.log(search);
-    querySnapshot.forEach((doc) => {     
+    querySnapshot.forEach((doc) => {
         if (doc.data().name.toLowerCase().includes(search)) {
             let col = $('<div class="col"></div>');
             $(group).append(col);
@@ -22,10 +21,10 @@ db.collection("equipments").get().then((querySnapshot) => {
             let star3 = $('<span class="fa fa-star"></span>');
             let star4 = $('<span class="fa fa-star"></span>');
             let star5 = $('<span class="fa fa-star"></span>');
-            let text = $('<p class="card-text"></p>');  
-            $(out).append(img,cardbody);
-            $(cardbody).append(title,star1,star2,star3,star4,star5,text);
-            img.attr("src",doc.data().imgurl);
+            let text = $('<p class="card-text"></p>');
+            $(out).append(img, cardbody);
+            $(cardbody).append(title, star1, star2, star3, star4, star5, text);
+            img.attr("src", doc.data().imgurl);
             title.html(doc.data().name);
             text.html(doc.data().description);
             if (doc.data().avgRating >= 1) {
@@ -45,39 +44,4 @@ db.collection("equipments").get().then((querySnapshot) => {
             }
         }
     });
-
-
-    
 });
-
-
-
-
-/*function writeCities() {
-    var citiesRef = db.collection("equipments");
-
-    citiesRef.doc("wp1").set({
-        "avgRating" : 4.0
-    }, { merge: true });
-
-    citiesRef.doc("wp2").set({
-        "avgRating" : 4
-    }, { merge: true });
-
-    citiesRef.doc("wp3").set({
-        "avgRating" : 4.5
-    }, { merge: true });
-
-    citiesRef.doc("wp4").set({
-        "avgRating" : 3.8
-    }, { merge: true });
-
-    citiesRef.doc("wp5").set({
-        "avgRating" : 4.2
-    }, { merge: true });
-
-    citiesRef.doc("wp6").set({
-        "avgRating" : 4.0
-    }, { merge: true });
-}
-*/

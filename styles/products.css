@@ -1,44 +1,46 @@
-#info{
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(../images/dumbell.jpg);
+#info {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/dumbell.jpg);
     background-position: center;
     height: 250px;
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
     color: white;
     margin-bottom: 30px;
 }
 
-#info h1{
+#info h1 {
     margin-top: 55px;
 }
-#info p{
+
+#info p {
     padding: 0 15px;
 }
 
-.card-img-top{
+.card-img-top {
     height: 230px;
     border-bottom: 2px solid #e67e22;
     padding: 25px;
 }
 
-.col{
+.col {
     margin-bottom: 10px;
 }
 
 
-.card-title{
+.card-title {
     float: left;
 }
-.fa-star{
+
+.fa-star {
     float: right;
 }
 
-.card-text{
+.card-text {
     float: left;
 }
 
 .checked {
     color: orange;
-  }
+}

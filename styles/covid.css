@@ -1,18 +1,19 @@
-#info{
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(../images/covid.jpg);
+#info {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/covid.jpg);
     background-position: center;
     height: 250px;
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
     color: white;
     margin-bottom: 50px;
 }
 
-#info h1{
+#info h1 {
     margin-top: 55px;
 }
-#info p{
+
+#info p {
     padding: 0 15px;
 }
