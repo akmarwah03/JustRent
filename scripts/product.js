@@ -49,20 +49,34 @@ function readData() {
                     querySnapshot.forEach((doc) => {
                         //console.log(doc);
                         if (doc.data().pid == pid) {
+
+                            var row = $("<div class='row'></div>");
+                            $('#review').append(row);
+
+                            var row2 = $("<div class='row'><div class='col'></div></div><br>");
+                            $('#review').append(row2);
+
+                            var col1 = $("<div class='col-3'><img src='./images/stockuser.jpg' alt='' style='border-radius: 50%; height: 50px; width: auto; float: left;'></div>");
+                            $(row).append(col1);
+
+                            var col2 = $("<div class='col-9'></div>");
+                            $(row).append(col2);
+
                             let x = doc.data().stars;
                             for (var j = 1; j <= x; j++) {
                                 $(".stars" + j).css("color", "orange");                    
                             }
+
                             let z = doc.data().name;
                             var name = $('<div class = "name">' + (doc.data().name) + '</div>')
-                            $("#review").append(name); 
+                            $(col2).append(name); 
                 
                             var stars = $('<div class="star"> <span class="fa fa-star stars1"></span> <span class="fa fa-star stars2"></span><span class="fa fa-star stars3"></span><span class="fa fa-star stars4"></span><span class="fa fa-star stars5"></span></div>');
-                            $("#review").append(stars);
+                            $(col2).append(stars);
                 
                             let y = doc.data().description;
                             var description = $('<div class ="description">' + (doc.data().description) + '</div>')
-                            $("#review").append(description); 
+                            $(row2).append(description); 
                         
                         }
                     })
